@@ -14,6 +14,14 @@ const obsClasses = {
 };
 
 class MINTableRow extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      region: this.getRegion()
+    };
+  }
+
   obsTypes() {
     return this.props.obs.map((obs) => (<Badge key={obs.obid} color={obsClasses[obs.obtype]} pill>{obs.obtype}</Badge>))
   }
@@ -22,7 +30,7 @@ class MINTableRow extends Component {
     return `https://www.avalanche.ca/map?panel=mountain-information-network-submissions/${this.props.subid}`;
   }
 
-  region() {
+  getRegion() {
     const point = TurfPoint(this.props.latlng.reverse());
     return avcanRegions.features.filter((feature) => (booleanWithin(point, feature))).map((feature) => (feature.properties.name));
   }
@@ -38,10 +46,10 @@ class MINTableRow extends Component {
         <td>{this.props.user}</td>
         <td>{this.props.title}</td>
         <td>{this.obsTypes()}</td>
-        <td>{this.region()}</td>
+        <td>{this.state.region}</td>
         <td>
           <a href={this.avCanUrl()}>
-            <Button color="primary" size="lg">View on AvCan</Button>
+            <Button color="primary" size="md">View on AvCan</Button>
           </a>
         </td>
       </tr>

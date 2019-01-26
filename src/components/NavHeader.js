@@ -23,7 +23,7 @@ class NavHeader extends Component {
               <NavLink href="http://avalanche.ca">Avalanche Canada</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/">Help</NavLink>
+              <NavLink href="#" onClick={this.props.toggleModal}>Help</NavLink>
             </NavItem>
           </Nav>
         </Navbar>

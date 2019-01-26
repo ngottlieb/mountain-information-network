@@ -5,8 +5,8 @@ import MINTableRow from "./MINTableRow.js";
 import {GridLoader} from "react-spinners";
 
 class MINTable extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       reports: [],
