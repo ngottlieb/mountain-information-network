@@ -13,7 +13,7 @@ class NavHeader extends Component {
       <header>
         <Navbar color="dark" dark expand="md">
           <NavbarBrand href="/">
-            MIN Viewer
+            Mountain Information Network
           </NavbarBrand>
           <Nav className="ml-auto" navbar>
             <NavItem>
