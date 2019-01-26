@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/mountain-information-network/precache-manifest.5ece3bee9cb5c478808eadb9ff77f706.js"
+  "/mountain-information-network/precache-manifest.8a8f79c79044d33403d4733c3cf77651.js"
 );
 
 workbox.clientsClaim();
